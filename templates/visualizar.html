@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Visualizar Agendamentos</title>
+</head>
+<body>
+    <h1>Agendamentos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Professor</th>
+                <th>Laboratório</th>
+                <th>Curso</th>
+                <th>Disciplina</th> <!-- Novo cabeçalho -->
+                <th>Data</th>
+                <th>Hora Início</th>
+                <th>Hora Fim</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agendamento in agendamentos %}
+            <tr>
+                <td>{{ agendamento[0] }}</td>
+                <td>{{ agendamento[1] }}</td>
+                <td>{{ agendamento[2] }}</td>
+                <td>{{ agendamento[3] }}</td> <!-- Novo campo -->
+                <td>{{ agendamento[4] }}</td>
+                <td>{{ agendamento[5] }}</td>
+                <td>{{ agendamento[6] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="{{ url_for('agendar') }}">Agendar Novo</a></p>
+</body>
+</html>
