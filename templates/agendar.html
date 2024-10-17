@@ -9,6 +9,17 @@
 <body>
     <div class="form-container">
         <h1>Agendar Laboratório</h1>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
         <form method="POST" action="{{ url_for('agendar') }}">
             <label for="professor">Professor:</label>
             <input type="text" id="professor" name="professor" placeholder="Nome do professor" required>
@@ -30,11 +41,12 @@
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" required>
 
-            <label for="hora_inicio">Hora Início:</label>
-            <input type="time" id="hora_inicio" name="hora_inicio" required>
-
-            <label for="hora_fim">Hora Fim:</label>
-            <input type="time" id="hora_fim" name="hora_fim" required>
+            <label for="periodo">Período:</label>
+            <select id="periodo" name="periodo" required>
+                <option value="manha">Manhã</option>
+                <option value="tarde">Tarde</option>
+                <option value="noite">Noite</option>
+            </select>
 
             <button type="submit">Agendar</button>
         </form>
