@@ -1,0 +1,26 @@
+[
+    {
+        "professor": "Daniel",
+        "laboratorio": "Laborat\u00f3rio 1",
+        "curso": "TI",
+        "disciplina": "redes 3",
+        "data": "2024-10-17",
+        "periodo": "manha"
+    },
+    {
+        "professor": "Jujubinha",
+        "laboratorio": "Laborat\u00f3rio 1",
+        "curso": "TI",
+        "disciplina": "redes 22",
+        "data": "2024-10-18",
+        "periodo": "tarde"
+    },
+    {
+        "professor": "Jujubinha",
+        "laboratorio": "Laborat\u00f3rio 1",
+        "curso": "TI",
+        "disciplina": "redes 22",
+        "data": "2024-10-18",
+        "periodo": "manha"
+    }
+]
